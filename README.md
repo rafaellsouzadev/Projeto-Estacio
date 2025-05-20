@@ -4,6 +4,7 @@
 <img align="center" alt="" width="60px" src="https://user-images.githubusercontent.com/22895992/97350961-6f34fc00-1891-11eb-94b3-a1613097159f.png"> 
 </div>
 <br/>
+
 - Desenvolvedor: Rafael Souza
   <hr>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="application.controllers.TelaInicialController"
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            prefHeight="720.0" prefWidth="1024.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f0f4ff, #d9e2f3);">
+    
+    <children>
+        <VBox alignment="CENTER" spacing="20.0" layoutX="262.0" layoutY="200.0" prefWidth="500.0">
+            <Label text="📦 Cadastro de Produtos" textFill="#1E88E5">
+                <font>
+                    <Font size="28.0"/>
+                </font>
+            </Label>
+            <Label text="Sistema para gerenciamento de produtos - Projeto de Faculdade" textFill="#555555" wrapText="true">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </Label>
+            <Button text="→ Ir para Produtos" onAction="#abrirTelaProdutos"
+                    style="-fx-background-color: #1E88E5; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-background-radius: 10;" />
+        </VBox>
+
+        <Label layoutX="20.0" layoutY="690.0" text="Desenvolvido por Rafael Souza" textFill="#888888">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

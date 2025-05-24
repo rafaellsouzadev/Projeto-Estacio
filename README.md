@@ -11,4 +11,4 @@
 ### Tela Inicial do projeto
 ![Tela inicial](https://github.com/user-attachments/assets/2739fa33-ffd0-4bdf-825a-427fbd8e669a)
 ### Tela de Cadastro de produto
-![Tela de produto](https://github.com/user-attachments/assets/7dfc22d1-c9c3-483c-a9ea-a9da583e5a69)
+![Tela Produto com valor total](https://github.com/user-attachments/assets/96a2c09a-9ed5-4b68-abd1-9aeb245133ec)

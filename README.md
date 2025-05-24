@@ -3,6 +3,11 @@
 <img align="center" alt="Java" width="70px" src="https://www.qftest.com/fileadmin/Webdata/logos-icons/JavaFX.png?style=for-the-badge&logo=java&logoColor=write">
 <img align="center" alt="" width="60px" src="https://user-images.githubusercontent.com/22895992/97350961-6f34fc00-1891-11eb-94b3-a1613097159f.png"> 
 </div>
+
+- Banco de dado utilizado no projeto
+<div>
+<img align="center" alt="POSTGRESQL" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
+</div>
 <br/>
 
 - Desenvolvedor: Rafael Souza

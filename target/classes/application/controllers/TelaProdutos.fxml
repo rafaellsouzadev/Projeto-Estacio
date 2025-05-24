@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: linear-gradient(to bottom, #f0f4ff, #d9e2f3);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ProdutoController">
+
+    <VBox>
+        
+        <!-- Título principal -->
+        <Label text="📦 Cadastro de Produto" textFill="#1E88E5">
+            <font>
+                <Font size="26" />
+            </font>
+        </Label>
+
+        <!-- Formulário de cadastro -->
+        <VBox spacing="10" style="-fx-background-color: linear-gradient(to bottom, #f0f4ff, #d9e2f3); -fx-background-radius: 10; -fx-padding: 15;">
+             <GridPane hgap="20" vgap="10">
+                <!-- Primeira linha: Nome e Descrição -->
+                <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="txtNome" promptText="Digite o nome" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Descrição:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <TextField fx:id="txtDescricao" promptText="Digite a descrição" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                <!-- Segunda linha: Preço e Quantidade -->
+                <Label text="Preço:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="txtPreco" promptText="Digite o preço" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Quantidade:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="txtQuantidade" promptText="Digite a quantidade" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <Button fx:id="btnSalvar" alignment="CENTER_LEFT" onAction="#salvarProduto" style="-fx-background-color: #1E88E5; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 17; -fx-background-radius: 8;" text="Salvar Produto" textAlignment="JUSTIFY">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets left="333.0" />
+            </VBox.margin></Button>
+        </VBox>
+
+        <!-- Seção de pesquisa -->
+        <VBox spacing="10" style="-fx-background-color: #eef2fb; -fx-background-radius: 10; -fx-padding: 15;">
+            <Label text="🔍 Pesquisa de Produto" textFill="#1E88E5">
+                <font>
+                    <Font size="20" />
+                </font>
+            </Label>
+            <HBox spacing="10">
+                <TextField fx:id="txtPesquisa" promptText="Pesquisar produto..." />
+                <Button fx:id="btnPesquisar" onAction="#pesquisarProduto" text="Pesquisar" />
+                <Button fx:id="btnRemover" onAction="#removerProduto" text="Remover Selecionado" />
+            </HBox>
+        </VBox>
+
+        <!-- Tabela de produtos -->
+        <TableView fx:id="tableProdutos"  prefHeight="400" style="-fx-background-color: linear-gradient(to bottom, #f0f4ff, #d9e2f3);">
+            <columns>
+                <TableColumn fx:id="colunaNome" prefWidth="200" text="Nome" style="-fx-alignment: CENTER;"/>                
+                <TableColumn fx:id="colunaDescricao" prefWidth="500" text="Descrição" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="colunaPreco" prefWidth="100"  text="Preço" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="colunaQuantidade" prefWidth="100" text="Quantidade" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="colunaTotal" prefWidth="100"  text="Valor Total" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>

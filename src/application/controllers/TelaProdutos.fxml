@@ -79,10 +79,11 @@
         <!-- Tabela de produtos -->
         <TableView fx:id="tableProdutos"  prefHeight="400" style="-fx-background-color: linear-gradient(to bottom, #f0f4ff, #d9e2f3);">
             <columns>
-                <TableColumn fx:id="colunaNome" prefWidth="200" text="Nome" style="-fx-alignment: CENTER;"/>
-                <TableColumn fx:id="colunaPreco" prefWidth="100"  text="Preço" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="colunaNome" prefWidth="200" text="Nome" style="-fx-alignment: CENTER;"/>                
                 <TableColumn fx:id="colunaDescricao" prefWidth="500" text="Descrição" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="colunaPreco" prefWidth="100"  text="Preço" style="-fx-alignment: CENTER;"/>
                 <TableColumn fx:id="colunaQuantidade" prefWidth="100" text="Quantidade" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="colunaTotal" prefWidth="100"  text="Valor Total" style="-fx-alignment: CENTER;"/>
             </columns>
         </TableView>
 

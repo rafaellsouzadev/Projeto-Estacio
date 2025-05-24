@@ -32,6 +32,9 @@ public class ProdutoController {
     private TableColumn<Produto, Double> colunaPreco;
     
     @FXML
+    private TableColumn<Produto, Double> colunaTotal;
+    
+    @FXML
     private TableColumn<Produto, String> colunaDescricao;
     
     @FXML
@@ -78,6 +81,21 @@ public class ProdutoController {
                 } else {
                     NumberFormat formatador = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
                     setText(formatador.format(preco));
+                    setStyle("-fx-alignment: CENTER;");
+                }
+            }
+        });
+        
+        colunaTotal.setCellValueFactory(new PropertyValueFactory<>("precoTotal"));
+        colunaTotal.setCellFactory(tc -> new TableCell<Produto, Double>() {
+            @Override
+            protected void updateItem(Double precoTotal, boolean empty) {
+                super.updateItem(precoTotal, empty);                
+                if (empty || precoTotal == null) {
+                    setText(null);
+                } else {
+                    NumberFormat formatador = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
+                    setText(formatador.format(precoTotal));
                     setStyle("-fx-alignment: CENTER;");
                 }
             }
@@ -130,8 +148,9 @@ public class ProdutoController {
 
         try {
             double preco = Double.parseDouble(precoStr);
-            int quantidade = Integer.parseInt(quantidadeStr);           
-            Produto produto = new Produto(nome, preco, descricao, quantidade);           
+            int quantidade = Integer.parseInt(quantidadeStr);  
+            double precoTotal = preco * quantidade;
+            Produto produto = new Produto(nome, preco, precoTotal, descricao, quantidade);           
             produtoService.salvar(produto);            
             limparCampos();
             carregarProdutos();

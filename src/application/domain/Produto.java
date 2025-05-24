@@ -7,15 +7,17 @@ public class Produto {
 	
 	private String nome;
 	private Double preco;
+	private Double precoTotal;
 	private String descricao;
 	private int quantidade;
 	
 	public Produto() {
 	}
 
-	public Produto(String nome, Double preco, String descricao, int quantidade) {
+	public Produto(String nome, Double preco,Double precoTotal, String descricao, int quantidade) {
 		this.nome = nome;
 		this.preco = preco;
+		this.precoTotal = precoTotal;
 		this.descricao = descricao;
 		this.quantidade = quantidade;
 	}
@@ -23,6 +25,11 @@ public class Produto {
 	public String getPrecoFormat() {
 		NumberFormat fm = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));   
 		return fm.format(preco);
+	}
+	
+	public String getPrecoTotalFormat() {
+		NumberFormat fm = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));   
+		return fm.format(precoTotal);
 	}
 
 	public String getNome() {
@@ -39,6 +46,14 @@ public class Produto {
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}	
+
+	public Double getPrecoTotal() {
+		return precoTotal;
+	}
+
+	public void setPrecoTotal(Double precoTotal) {
+		this.precoTotal = precoTotal;
 	}
 
 	public String getDescricao() {

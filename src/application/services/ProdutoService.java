@@ -12,9 +12,9 @@ public class ProdutoService {
 	
 	public ProdutoService() {	
 		   
-		produtos.add(new Produto("Impressora", 600.00, "Epson EcoTank L3250 - Multifuncional, Tanque de Tinta Colorida, Wi-Fi Direct, USB, Bivolt, Preto", 5));
-		produtos.add(new Produto("Processador AMD Ryzen 7 5700X3D", 1649.99, "Epson EcoTank L3250 - Multifuncional, Tanque de Tinta Colorida, Wi-Fi Direct, USB, Bivolt, Preto", 3));
-		produtos.add(new Produto("Processador Intel Core i7-12700KF", 1569.99, "i7-12700KF, 3.6GHz (5.0GHz Max Turbo), Cache 25MB, 12 Núcleos, 20 Threads, LGA 1700 - BX8071512700KF", 4));
+		produtos.add(new Produto("Impressora", 600.00, 3000.00, "Epson EcoTank L3250 - Multifuncional, Tanque de Tinta Colorida, Wi-Fi Direct, USB, Bivolt, Preto", 5));
+		produtos.add(new Produto("Processador AMD Ryzen 7 5700X3D", 1649.99,4949.97, "Epson EcoTank L3250 - Multifuncional, Tanque de Tinta Colorida, Wi-Fi Direct, USB, Bivolt, Preto", 3));
+		produtos.add(new Produto("Processador Intel Core i7-12700KF", 1569.99,6279.96, "i7-12700KF, 3.6GHz (5.0GHz Max Turbo), Cache 25MB, 12 Núcleos, 20 Threads, LGA 1700 - BX8071512700KF", 4));
 		
 	}
 

@@ -1,4 +1,8 @@
 # Projeto Estácio
+![GitHub repo size](https://img.shields.io/github/repo-size/rafaellsouzadev/Projeto-Estacio)
+![GitHub language count](https://img.shields.io/github/languages/count/rafaellsouzadev/Projeto-Estacio)
+![GitHub top language](https://img.shields.io/github/languages/top/rafaellsouzadev/Projeto-Estacio)
+![GitHub license](https://img.shields.io/github/license/rafaellsouzadev/Projeto-Estacio)
 
 ## Descrição
 

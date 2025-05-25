@@ -1,20 +1,23 @@
 package application.domain;
 
+import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.util.Objects;
 
 public class Produto {
 	
+	private Integer id;
 	private String nome;
-	private Double preco;
-	private Double precoTotal;
+	private BigDecimal preco;
+	private BigDecimal precoTotal;
 	private String descricao;
 	private int quantidade;
 	
 	public Produto() {
 	}
 
-	public Produto(String nome, Double preco,Double precoTotal, String descricao, int quantidade) {
+	public Produto(String nome, BigDecimal preco,BigDecimal precoTotal, String descricao, int quantidade) {
 		this.nome = nome;
 		this.preco = preco;
 		this.precoTotal = precoTotal;
@@ -31,6 +34,16 @@ public class Produto {
 		NumberFormat fm = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));   
 		return fm.format(precoTotal);
 	}
+	
+	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -40,19 +53,19 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public Double getPreco() {
+	public BigDecimal getPreco() {
 		return preco;
 	}
 
-	public void setPreco(Double preco) {
+	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}	
 
-	public Double getPrecoTotal() {
+	public BigDecimal getPrecoTotal() {
 		return precoTotal;
 	}
 
-	public void setPrecoTotal(Double precoTotal) {
+	public void setPrecoTotal(BigDecimal precoTotal) {
 		this.precoTotal = precoTotal;
 	}
 
@@ -70,6 +83,23 @@ public class Produto {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Produto other = (Produto) obj;
+		return Objects.equals(id, other.id);
 	}
 	
 	
